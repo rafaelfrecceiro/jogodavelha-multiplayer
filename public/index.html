@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+      <style>
+          *{
+              padding: 0px;
+              margin: 0px;
+          }
+
+          body{
+              background-color: #525252;
+              overflow: hidden;
+          }
+      </style>
   </head>
   <body>
     <noscript>
@@ -13,5 +24,9 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+  <script>
+      var viewport = document.querySelector("meta[name=viewport]");
+      viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight);
+  </script>
   </body>
 </html>
